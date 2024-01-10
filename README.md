@@ -1,5 +1,25 @@
 # Analisador de Texto
 
+O objetivo deste projeto foi criar um analisador de texto capaz de contabilizar quantidades de palavras e números, caracteres com e sem espaço, comprimento médio das palavras e soma total dos números presentes no texto.
+
+Foram seguidos os critérios mínimos do projeto - situados ao final deste documento -, com incrementações de estilo ao longo do desenvolvimento.
+
+# Etapas
+
+As etapas seguidas para o desenvolvimento do projeto foram, respectivamente:
+
+1) criação de conta no Github e download dos programas necessários para o desenvolvimento do projeto;
+2) fork do repositório, criação de chave SSH do projeto e clonagem do repositório;
+3) criação de protótipo de baixa fidelidade no <a href="https://www.figma.com/file/NLJHZleLgDKRHXNzFtQ9q7/Prot%C3%B3tipo-P1-Laborat%C3%B3ria?type=whiteboard&node-id=0-1&t=yquOWUvaO06hHkQf-0">Figma</a>;
+4) criação de árvore HTML no protótipo supracitado, buscando visualizar a hierarquia do código;
+5) desenvolvimento do código HTML;
+6) estilização do projeto em CSS;
+7) criação de eventos DOM no projeto;
+8) codificação as análises de texto e números;
+9) testes;
+10) publicação no github.
+
+
 ## Índice
 
 - [1. Considerações gerais](#1-considerações-gerais)
@@ -18,12 +38,9 @@
 
 ## 1. Considerações gerais
 
-- Este projeto será resolvido de forma **individual**.
-- A estimativa de tempo para completar o projeto varia de 2 a 4 Sprints.
-- Concentre-se em aprender, não apenas em "completar" o projeto.
-- Sugerimos que você não tente saber tudo antes de começar a codificar.
-  Não se preocupe muito com o que você _ainda_ não entende.
-  Você aprenderá ao longo do processo.
+- Este projeto foi desenvolvido de forma individual ao longo de 4 Sprints;
+- O foco do projeto foi a criação de um analisador de texto com funcionalidades que aplicassem conceitos de HTML, CSS e Javascript;
+- O principal objetivo foi compreender os usos do HTML semântico e diferentes formas de estilização com CSS, além de aprender sobre criação e manipulação de eventos DOM e JS vanilla. 
 
 ## 2. Preâmbulo
 
@@ -49,49 +66,34 @@ podem obter uma compreensão mais profunda dos textos.
 
 ## 3. Resumo do projeto
 
-Neste projeto, você criará uma aplicação web que permitirá que a usuária analise
-um texto no navegador, exibindo uma série de indicadores e métricas específicas
-sobre caracteres, letras, números, etc., que foram inseridos por ela como entrada.
-Você realizará isso usando HTML, CSS e JavaScript.
+Neste projeto, foi desenvolvida uma aplicação web a partir de usos do HTML, do CSS e do Javascript, permitindo a análise de um texto no navegador ao exibir uma série de indicadores e métricas específicas sobre caracteres, letras, números, etc.
 
 ## 4. Funcionalidades
 
-A lista de funcionalidades é a seguinte:
+O projeto possui as seguintes funcionalidades:
 
-1. A aplicação deve permitir que a usuária insira um texto escrevendo-o
-    em uma caixa de texto.
+1. Permite a inserção de um texto escrevendo-o em uma caixa de texto.
 
-2. A aplicação deve calcular as seguintes métricas e atualizar o
-    resultado em tempo real conforme a usuária escreve o texto:
+2. Efetua o cálculo das seguintes métricas, atualizando os resultados em tempo real, conforme a usuária escreve o texto:
 
-    - **Contagem de palavras**: a aplicação deve ser capaz de contar o número de
-    palavras no texto de entrada e mostrar essa contagem para a usuária.
-    - **Contagem de caracteres**: a aplicação deve ser capaz de contar o número de
-    caracteres no texto de entrada, incluindo espaços e sinais de
-    pontuação, e mostrar essa contagem para a usuária.
+    - **Contagem de palavras**: a aplicação conta o número de palavras no texto de entrada e mostra essa contagem para a usuária.
+    - **Contagem de caracteres**: a aplicação conta o número de caracteres no texto de entrada, incluindo espaços e sinais de pontuação, mostrando essa contagem para a usuária.
     - **Contagem de caracteres excluindo espaços e sinais de pontuação**:
-    a aplicação deve ser capaz de contar o número de caracteres no texto de
-    entrada, excluindo espaços e sinais de pontuação, e mostrar essa contagem
-    para a usuária.
-    - **Contagem de números**: a aplicação deve contar quantos números há no
-    texto de entrada e mostrar essa contagem para a usuária.
-    - **Soma total dos números**: a aplicação deve somar todos os números que
-    estão no texto de entrada e mostrar o resultado para a usuária.
-    - **Comprimento médio das palavras**: a aplicação deve calcular o
-    comprimento médio das palavras no texto de entrada e mostrar esse valor para a usuária.
+    a aplicação conta o número de caracteres no texto de entrada, excluindo espaços e sinais de pontuação, e apresenta essa contagem para a usuária.
+    - **Contagem de números**: a aplicação conta quantos números há no texto de entrada, apresentando a contagem para a usuária.
+    - **Soma total dos números**: a aplicação soma todos os números que estão no texto de entrada e mostra o resultado para a usuária.
+    - **Comprimento médio das palavras**: a aplicação calcula o comprimento médio das palavras no texto de entrada e mostra esse valor para a usuária.
 
-3. A aplicação deve permitir limpar o conteúdo da caixa de texto ao clicar
-    em um botão.
+3. A aplicação permite limpar o conteúdo da caixa de texto ao clicar em um botão.
 
-![Demonstração do analisador de texto](https://github-production-user-asset-6210df.s3.amazonaws.com/12631491/240650556-988dcd6f-bc46-473b-894c-888a66c9fe2d.gif "Demonstração do analisador de texto")
+<img src="src/projeto.gif">
 
 ## 5. Boilerplate
 
-A lógica do projeto deve ser implementada completamente em JavaScript. Neste
-projeto, NÃO é permitido usar bibliotecas ou frameworks, apenas JavaScript
+A lógica do projeto foi implementada completamente em JavaScript. Neste projeto, não foram utilizadas bibliotecas ou frameworks, apenas JavaScript
 puro, também conhecido como Vanilla JavaScript.
 
-Para começar este projeto, você precisará fazer um _fork_ e _clonar_ este
+Para começar o projeto, você precisará fazer um _fork_ e _clonar_ este
 repositório que contém um _boilerplate_ com testes. Um _boilerplate_
 é a estrutura básica de um projeto que serve como um ponto de partida com
 arquivos e configuração inicial de dependências e testes.
@@ -274,7 +276,7 @@ relacionados a cada objetivo de aprendizado.
 
 - **Modelo de caixa (box model): borda, margem, preenchimento**
 
-  + [ ] As
+  + [OK] As
         [`classes CSS`](https://developer.mozilla.org/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#class_selectors)
         dos
         [`<li>`](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/li)
@@ -304,7 +306,7 @@ relacionados a cada objetivo de aprendizado.
         para ouvir o evento `keyup` do `<textarea>` e atualizar as métricas
         quando o texto for digitado na caixa de texto.
 
-  + [ ] A aplicação registra um
+  + [OK] A aplicação registra um
         [Event Listener](https://developer.mozilla.org/pt-BR/docs/Web/API/EventTarget/addEventListener)
         para ouvir o evento `click` do `<button>` que limpa o conteúdo da caixa
         de texto.
@@ -387,7 +389,7 @@ relacionados a cada objetivo de aprendizado.
 
 - **Uso de linter (ESLINT)**
 
-  + [ ] Ao executar o linter, não são exibidos erros de formato e estilo.
+  + [OK] Ao executar o linter, não são exibidos erros de formato e estilo.
 
 - **Uso de identificadores descritivos (Nomenclatura e Semântica)**
 
@@ -407,7 +409,7 @@ relacionados a cada objetivo de aprendizado.
 
   + [OK] A estudante clonou seu repositório usando uma chave SSH.
 
-  + [ ] A estudante criou _commits_ e os salvou no Github.
+  + [OK] A estudante criou _commits_ e os salvou no Github.
 
 - **GitHub: Implantação com GitHub Pages**
 
@@ -421,11 +423,11 @@ relacionados a cada objetivo de aprendizado.
 
 - **Projetar em diferentes níveis de fidelidade**
 
-  + [ ] A estudante criou protótipos de baixa fidelidade para a UI (interface gráfica).
+  + [OK] A estudante criou protótipos de baixa fidelidade para a UI (interface gráfica).
 
 - **Seguir os princípios básicos do design visual**
 
-  + [ ] Foram consideradas as regras básicas de
+  + [OK] Foram consideradas as regras básicas de
         [design visual](https://coda.io/d/Bootcamp-UX-Contenido_dqkqk2rV9Z2/Reglas-basicas-de-diseno-visual_suVcO)
         para projetar a UI (interface gráfica).
 
@@ -746,3 +748,6 @@ Você pode habilitar os testes unitários e _end-to-end_ para esses casos nos
 arquivos [test/analyzer.spec.js](test/analyzer.spec.js) e
 [read-only/test/e2e/app.spec.js](read-only/test/e2e/app.spec.js).
 Você também precisará ajustar os testes existentes para as funcionalidades requeridas.
+
+
+[<img src="src/projeto.gif">]: <img src="src/projeto.gif">"Demonstração do analisador de texto"

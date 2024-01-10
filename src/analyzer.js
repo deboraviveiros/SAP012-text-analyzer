@@ -1,22 +1,42 @@
-const analyzer = {  
+const analyzer = {
   getWordCount: (text) => {
-    //TODO: esta función debe retornar el recuento de palabras que se encuentran en el parámetro `text` de tipo `string`.
+    const cortaPalavra = text.split(' ').filter((word) => word !== '');
+    return cortaPalavra.length;
   },
   getCharacterCount: (text) => {
-    //TODO: esta función debe retornar el recuento de caracteres que se encuentran en el parámetro `text` de tipo `string`.
+    return text.length;
   },
   getCharacterCountExcludingSpaces: (text) => {
-    //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
+    const spaces = text.replace(/[^a-zA-Z0-9]+/g, '').length;
+    return spaces;
   },
-  getAverageWordLength: (text) => {    
-    //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
+  getAverageWordLength: (text) => {
+    const cortaPalavra = text.split(' ');
+    const totalPalavras = cortaPalavra.join('');
+    const calcPalavra = totalPalavras.length / cortaPalavra.length;
+    if (calcPalavra >= 0) {
+      return parseFloat(calcPalavra.toFixed(2));
+    } else {
+      return 0;
+    }
   },
   getNumberCount: (text) => {
-    //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
+    const numbers = text.replace(/.$/gm, '').split(' ').filter((word) => isNaN(word) === false && word !== '');
+    console.log(numbers);
+    if (parseFloat(numbers) >= 0) {
+      return numbers.length;
+    } else {
+      return 0;
+    }
   },
   getNumberSum: (text) => {
-    //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
+    let total = 0;
+    const regex = text.replace(/.$/gm, '').split(' ').filter((word) => isNaN(word) === false && word !== '');
+    console.log(regex);
+    for (let i = 0; i < regex.length; i++) {
+      total += parseFloat(regex[i]);
+    }
+    return total;
   },
 };
-
 export default analyzer;
