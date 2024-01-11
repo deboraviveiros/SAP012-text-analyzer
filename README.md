@@ -2,7 +2,7 @@
 
 O objetivo deste projeto foi criar um analisador de texto capaz de contabilizar quantidades de palavras e números, caracteres com e sem espaço, comprimento médio das palavras e soma total dos números presentes no texto. O desenvolvimento do projeto ocorreu ao longo de 4 _Sprints_ de acordo com os critérios mínimos do projeto - situados ao final deste documento. O trabalho foi pautado na autoaprendizagem, buscando um contato maior com a linguagem JavaScript e com a criação e manipulação de eventos DOM.
 
-# Etapas
+## Etapas
 
 As etapas seguidas para o desenvolvimento do projeto foram, respectivamente:
 
