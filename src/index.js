@@ -11,18 +11,18 @@ const comprimento = document.querySelector("[data-testid='word-length-average']"
 document.getElementById("reset-button").addEventListener("click", limparTexto);
 
 function limparTexto() {
-    if (areaTexto != 0) {
-        location.reload();
-    } else {
-        return;
-    }
+  if (areaTexto !== 0) {
+    location.reload();
+  } else {
+    return;
+  }
 }
 
 areaTexto.addEventListener("input", function () {
-    caracteres.textContent = analyzer.getCharacterCount(areaTexto.value) + " caractere(s)";
-    palavras.textContent = analyzer.getWordCount(areaTexto.value) + " palavra(s)";
-    semEspacos.textContent = analyzer.getCharacterCountExcludingSpaces(areaTexto.value) + " caracteres sem espaço";
-    numeros.textContent = analyzer.getNumberCount(areaTexto.value) + " números";
-    soma.textContent = "Soma total dos números = " + analyzer.getNumberSum(areaTexto.value);
-    comprimento.textContent = "Comprimento médio das palavras = " + analyzer.getAverageWordLength(areaTexto.value);
+  caracteres.textContent = analyzer.getCharacterCount(areaTexto.value) + " caractere(s)";
+  palavras.textContent = analyzer.getWordCount(areaTexto.value) + " palavra(s)";
+  semEspacos.textContent = analyzer.getCharacterCountExcludingSpaces(areaTexto.value) + " caracteres sem espaço";
+  numeros.textContent = analyzer.getNumberCount(areaTexto.value) + " números";
+  soma.textContent = "Soma total dos números = " + analyzer.getNumberSum(areaTexto.value);
+  comprimento.textContent = "Comprimento médio das palavras = " + analyzer.getAverageWordLength(areaTexto.value);
 })
