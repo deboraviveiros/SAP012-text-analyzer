@@ -488,19 +488,6 @@ na imagem a seguir:
 
 ![npm run test e2e](https://github-production-user-asset-6210df.s3.amazonaws.com/12631491/240650622-a4da630e-8d39-4dd8-9fde-1a38c31a53e2.gif "npm run test e2e")
 
-### GitHub Actions
-
-Este repositório usa o GitHub Actions para executar automaticamente
-os testes unitários, testes de critérios mínimos de aceitação e
-testes end-to-end toda vez que você fizer um _push_ no ramo
-_main_ do seu repositório.
-
-Você pode verificar o resultado desta GitHub Action
-na aba _Actions_ do seu repositório no GitHub,
-como mostrado na seguinte imagem:
-
-![GitHub Action](https://github-production-user-asset-6210df.s3.amazonaws.com/12631491/240650640-a8a8ed26-6f48-4053-8b3b-7dec7e35a9f8.gif "GitHub Action")
-
 ## 9. Objetivos de aprendizagem
 
 Os objetivos de aprendizagem definidos para este projeto foram atrelados à estratégia de trabalho desenvolvida ao longo das _Sprints_. Desse modo, a desenvolvedora utilizou menos tempo na codagem em HTML e CSS, aprofundando no aprendizado da linguagem JavaScript e nas manipulações do DOM, conforme os tópicos apresentados abaixo:
