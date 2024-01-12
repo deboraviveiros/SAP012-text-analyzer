@@ -81,9 +81,9 @@ O projeto possui as seguintes funcionalidades:
     - **Comprimento médio das palavras**: a aplicação calcula o comprimento médio das palavras no texto de entrada e mostra esse valor para a usuária.
 
 3. A aplicação permite limpar o conteúdo da caixa de texto ao clicar em um botão.
-
-<img style="margin:auto; display:block; max-width:250%; max-height:250%;" src="src/projeto.gif" href="https://deboraviveiros.github.io/SAP012-text-analyzer"/>
-
+<div style="display:flex; align-items:center;">
+<img style="margin:auto; display:block; max-width:250%; max-height:250%;" src="src/projeto.gif"/>
+</div>
 ## 5. Para começar
 
 Antes de começar, foram feitas as seguintes instalações:
